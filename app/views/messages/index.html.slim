@@ -1,0 +1,14 @@
+p
+  | Вы вошли как
+  '
+  b #{cookies.signed[:username]}
+
+#messages
+br
+
+= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |form|
+  = form.label :body, 'Введите сообщение:'
+  br
+  = form.text_field :body
+  br
+  = form.submit 'Отправить сообщение'
