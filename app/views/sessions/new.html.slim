@@ -1,0 +1,6 @@
+= form_for :session, url: sessions_path do |form|
+  = form.label :username, 'Ваш никнейм'
+  br
+  = form.text_field :username
+  br
+  = form.submit 'Войти в чат'
